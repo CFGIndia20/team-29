@@ -43,27 +43,30 @@
 <body>
   <div class="container m-5">
     <h4>Company Form</h4>
-    <form action="/action_page.php">
+    <form action="/company/form" method='POST'>
+      {% csrf_token %}
       <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="name" class="form-control">
+        <label for="name">Name</label>
+        <input type="name" name="name" class="form-control">
       </div>
       <div class="form-group">
-        <label for="email">Email address:</label>
-        <input type="email" class="form-control">
+        <label for="email">Email address</label>
+        <input type="email" name="email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="jobProfile">Job Profile</label>
+        <input type="jobProfile" name="jobProfile" class="form-control">
       </div>
       <div class="form-group" id="skills">
-        <label for="skills">Skills Required:</label>
+        <label for="skills">Skills Required</label>
         <input type="button" class="btn btn-default" onclick="addField()" value="Add Field">
         <input type="button" class="btn btn-default" onclick="removeField()" value="Remove Field">
       </div>
       <div class="form-group">
-        <label for="desc">Description:</label>
-        <textarea type="email" class="form-control"></textarea>
+        <label for="desc">Job Description</label>
+        <input type="text" name="description" class="form-control">
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
 </body>
-
-</html>
