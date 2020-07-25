@@ -4,3 +4,7 @@ Team*.zip
 *.crt
 *.key
 *.ovpn
+
+learn-src/dashboard/__pycache__
+learn-src/dashboard/migrations/__pycache__
+learn-src/dashboard/migrations/000*
