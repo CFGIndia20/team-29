@@ -5,7 +5,7 @@ class slots(models.Model):
     slotno = models.IntegerField()
 
 class teacher(models.Model):
-    qualification = models.CharField(max_length=30)
-    
+    qualification = models.CharField(max_length=50)
+
 class allotment(models.Model):
-    teachers = models.ForeignKey('')
+    teachers = models.ForeignKey('',on_delete=models.CASCADE)
