@@ -4,7 +4,7 @@ from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
 
-from .models import MyUser
+from .models import MyUser, student_register
 
 
 admin.site.site_header = "The/Nudge Admin"
@@ -71,7 +71,7 @@ class UserAdmin(BaseUserAdmin):
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
         ('Personal info', {'fields': ('first_name', 'last_name',)}),
-        ('Permissions', {'fields': ('is_student', 'is_teache', 'is_admin',)}),
+        ('Permissions', {'fields': ('is_student', 'is_teacher', 'is_admin',)}),
     )
     # add_fieldsets is not a standard ModelAdmin attribute. UserAdmin
     # overrides get_fieldsets to use this attribute when creating a user.
@@ -82,12 +82,15 @@ class UserAdmin(BaseUserAdmin):
         }),
     )
     search_fields = ('email','first_name', 'last_name',)
-    ordering = ('is_admin', 'is_student','is_teacher',)
+    ordering = ()
     filter_horizontal = ()
 
 
 # Now register the new UserAdmin...
 admin.site.register(MyUser, UserAdmin)
+
+
+admin.site.register(student_register)
 # ... and, since we're not using Django's built-in permissions,
 # unregister the Group model from admin.
 admin.site.unregister(Group)
