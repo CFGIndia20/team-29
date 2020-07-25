@@ -108,5 +108,11 @@ nav ul ul ul li{
 
 
 /*End of Blog Section*/
+.left {
+    float: left;
+}
 
+.full-width {
+    width: 100%;;
+}
 

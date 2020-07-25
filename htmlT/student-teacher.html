@@ -43,22 +43,22 @@
 <a class="nav-link text-light font-weight-bold" href="#">HOME</a>
 </li>
 <li class="nav-item dropdown" data-toggle="dropdown">
-<a class="nav-link text-light font-weight-bold px-3 dropdown-toggle" href="#">COURSE</a>
+<a class="nav-link text-light font-weight-bold px-3 dropdown-toggle" href="#" id="one-trigger">COURSE</a>
 <div class="dropdown-menu">
-<a class="dropdown-item" href="#">Problem Solving</a>
-<a class="dropdown-item" href="#">English Language</a>
-<a class="dropdown-item" href="#">Interpersonal skills</a>
-<a class="dropdown-item" href="#">Career Planning</a>
+<a class="dropdown-item  js-scroll-trigger" href="#problem-solving">Problem Solving</a>
+<a class="dropdown-item js-scroll-trigger" href="#English-Language">English Language</a>
+<a class="dropdown-item js-scroll-trigger" href="#Interpersonal-skills">Interpersonal skills</a>
+<a class="dropdown-item js-scroll-trigger" href="#Career-Planning">Career Planning</a>
 </div>
 </li>
-<li class="nav-item dropdown" data-toggle="dropdown">
-<a class="nav-link text-light font-weight-bold px-3" href="#">Sign in</a>
+<li class="nav-item dropdown">
+<a class="nav-link text-light font-weight-bold px-3 js-scroll-trigger" href="#">Sign in</a>
 </li>
-<li class="nav-item dropdown" data-toggle="dropdown">
-<a class="nav-link text-light font-weight-bold px-3" href="#">Register</a>
+<li class="nav-item dropdown">
+<a class="nav-link text-light font-weight-bold px-3 js-scroll-trigger" href="#">Register</a>
 </li>
 <li class="nav-item">
-<a class="nav-link text-light font-weight-bold px-3" href="#">Logout</a>
+<a class="nav-link text-light font-weight-bold px-3 js-scroll-trigger" href="#">Logout</a>
 </li>
 </ul>
 <!-- Search bar -->
@@ -77,21 +77,21 @@
 
   <div class="carousel-inner">
     <div class="item active">
-      <a href="#"><img src="D:\CFG-team29\images\teacher1.png" /></a>
+      <a href="#"><img src="D:\CFG-team29\images\t1.png" /></a>
       <div class="carousel-caption">
         <h3>Learn</h3>
         <p>Educate Yourself</p>
       </div>
     </div>
     <div class="item">
-      <a href="#"><img src="D:\CFG-team29\images\p2.png" /></a>
+      <a href="#"><img src="D:\CFG-team29\images\p1.png" /></a>
       <div class="carousel-caption">
         <h3>Grow</h3>
         <p>Stay Happy</p>
       </div>
     </div>
     <div class="item">
-      <a href="#"><img src="D:\CFG-team29\images\teacher1.png" /></a>
+      <a href="#"><img src="D:\CFG-team29\images\t1.png" /></a>
       <div class="carousel-caption">
         <h3>Shine</h3>
         <p>Grow and Shine</p>
@@ -110,7 +110,7 @@
 
 <!--Subjects-->
 <!--Problem Solving-->
-<section class="page-section mt-5"  id="blog">
+<section class="page-section mt-5"  id="one">
   <div class="container">
       <div class="text-center">
           <h2 class="section-heading text-uppercase">Courses</h2>
@@ -121,7 +121,7 @@
           <div class="card mb-4 shadow color">
             <div class="card-body ">
               <img src="D:\CFG-team29\images\Problem-Solving.jpg" class="card-img-top">
-              <div class="ribbon text font-weight-bold">Subject: Problem Solving</div>
+              <div class="ribbon text font-weight-bold" id=problem-solving>Subject: Problem Solving</div>
               <article>
                 <header class="mb-2">
                 <div class="small">Posted on: <time datetime="2017-03-12T10:24">July 22, 2020 at 01:44 PM</time></div>
@@ -139,7 +139,7 @@
           <div class="card mb-4 shadow color">
             <div class="card-body ">
               <img src="D:\CFG-team29\images\English Language.jpg" class="card-img-top">
-              <div class="ribbon text font-weight-bold">Subject: English Language</div>
+              <div class="ribbon text font-weight-bold" id="English-Language">Subject: English Language</div>
               <article>
                 <header class="mb-2">
                    <div class="font-weight-bold"></div>
@@ -156,7 +156,7 @@
           <div class="card mb-4 shadow color">
             <div class="card-body ">
               <img src="D:\CFG-team29\images\InterpersonalSkills.jpg" class="card-img-top">
-              <div class="ribbon text font-weight-bold">Subject: Interpersonal skills</div>
+              <div class="ribbon text font-weight-bold" id="Interpersonal-skills">Subject: Interpersonal skills</div>
               <article>
                 <header class="mb-2">
                    <div class="font-weight-bold"></div>
@@ -175,7 +175,7 @@
           <div class="card mb-4 shadow color">
             <div class="card-body ">
               <img src="D:\CFG-team29\images\CareerPlanning.jpg" class="card-img-top">
-              <div class="ribbon text font-weight-bold">Subject:Career Planning </div>
+              <div class="ribbon text font-weight-bold" id="Career-Planning">Subject:Career Planning </div>
               <article>
                 <header class="mb-2">
                    <div class="font-weight-bold"></div>
@@ -188,6 +188,72 @@
             </div>
           </div>
         </div>
+
+  <!--footer-->
+    <!-- start #footer -->
+    
+        </div>
+  </div>
+  <footer id="footer" class="bg-dark text-white py-5 container-fluid full-width">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-3 col-12">
+                <h4 class="font-rubik font-size-20">The/Nudge</h4>
+                <p class="font-size-14 font-rale text-white-50">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, deserunt.</p>
+              </div>
+              <div class="col-lg-4 col-12">
+                <h4 class="font-rubik font-size-20">Newslatter</h4>
+                <form class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Email *">
+                  </div>
+                  <div class="col">
+                    <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-lg-2 col-12">
+                <h4 class="font-rubik font-size-20">Information</h4>
+                <div class="d-flex flex-column flex-wrap">
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">About Us</a>
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Delivery Information</a>
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Privacy Policy</a>
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Terms & Conditions</a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-12">
+                <h4 class="font-rubik font-size-20">Account</h4>
+                <div class="d-flex flex-column flex-wrap">
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">My Account</a>
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Order History</a>
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Wish List</a>
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Newsletters</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <div class="copyright text-center bg-dark text-white py-2">
+          <p class="font-rale font-size-14">&copy; Copyrights 2020. Desing By <a href="#" class="color-second">CFG-29</a></p>
+        </div>
+        </footer>
+
+
+
+<script type="text/javascript">
+  $().ready (function () {
+  
+  $('#one-trigger').click (function (event){
+    // event.preventDefault();
+    var goTop = $('#one').offset().top;
+    $("html, body").animate({
+      scrollTop: goTop
+    }, 500);
+  });
+  
+  
+});
+</script>
 	</body>
 	</html>
 
