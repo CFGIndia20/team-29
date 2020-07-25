@@ -33,14 +33,19 @@
   </head>
   <body>
     <h4>Company Form: </h4>
-    <form class="form-horizontal" action="/action_page.php"> 
+    <form class="form-horizontal" action="/company/form" method='POST'>
+        {% csrf_token%}
         <div class="form-group">
             <label for="name" class="control-label col-sm-2">Name:</label>
-            <input type="name" class="form-control">
+            <input type="name" name="name" class="form-control">
           </div>
         <div class="form-group">
           <label for="email" class="control-label col-sm-2">Email address:</label>
-          <input type="email" class="form-control">
+          <input type="email" name="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="jobProfile" class="control-label col-sm-2">Job Profile</label>
+          <input type="jobProfile" name="jobProfile" class="form-control">
         </div>
         <div class="form-group" id="skills">
           <label for="skills" class="control-label col-sm-2">Skills Required:</label>
@@ -48,8 +53,8 @@
           <input type="button" class="btn btn-default" onclick="removeField()" value="Remove Field">
         </div>
         <div class="form-group">
-            <label for="desc" class="control-label col-sm-2">Description:</label>
-            <textarea type="email" class="form-control"></textarea>
+            <label for="desc" class="control-label col-sm-2">Job Description:</label>
+            <input type="text" name="description" class="form-control">
           </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
