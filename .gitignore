@@ -12,3 +12,6 @@ learn-src/dashboard/migrations/000*
 employee-src/accounts/__pycache__
 employee-src/accounts/migrations/__pycache__
 employee-src/accounts/migrations/000*
+
+employee-src/theNudgeEmployee/__pycache__/*
+employee-src/db.sqlite3

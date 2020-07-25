@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'theNudgeEmployee.wsgi.application'
 
+AUTH_USER_MODEL = 'accounts.MyUser'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
