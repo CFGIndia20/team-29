@@ -89,8 +89,12 @@ class UserAdmin(BaseUserAdmin):
 # Now register the new UserAdmin...
 admin.site.register(MyUser, UserAdmin)
 
+class student_registerAdmin(admin.ModelAdmin):
+    list_display = ('student_id', 'phone', 'hsc', 'ssc', 'is_validated', 'is_accepted')
+    ordering = ('hsc', 'ssc')
+    list_filter = ('hsc', 'ssc', 'is_validated', 'is_accepted')
 
-admin.site.register(student_register)
+admin.site.register(student_register, student_registerAdmin)
 # ... and, since we're not using Django's built-in permissions,
 # unregister the Group model from admin.
 admin.site.unregister(Group)
