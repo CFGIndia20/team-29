@@ -8,4 +8,6 @@ class teacher(models.Model):
     qualification = models.CharField(max_length=50)
 
 class allotment(models.Model):
-    teachers = models.ForeignKey('',on_delete=models.CASCADE)
+    teachers = models.ForeignKey('teacher',on_delete=models.CASCADE)
+    slotno = models.IntegerField('slotno',on_delete=models.CASCADE)
+    batchno = models.IntegerField()
