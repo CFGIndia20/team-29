@@ -1,0 +1,13 @@
+{% extends 'navbar/base.html' %}
+{% load static %}
+{% import 'card.html' as card %}
+{% block head %}
+        <link rel="stylesheet" href="style.css">
+{% endblock %}
+
+{% block body%}
+    {% for company in companies}
+        card.name(company.name)
+        card.desc(company.desc)
+    {% endfor %}
+{% endblock %}

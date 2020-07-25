@@ -13,7 +13,6 @@ learn-src/db.sqlite3
 employee-src/db.sqlite3
 __pycache__
 db.sqlite3
-<<<<<<< HEAD
 
 employee-src/accounts/__pycache__
 employee-src/accounts/migrations/000*
@@ -28,11 +27,9 @@ learn-src/accounts/migrations/__pycache__
 learn-src/theNudgeEmployee/__pycache__
 
 learn-src/db.sqlite3
-=======
 employee-src/accounts/__pycache__
 employee-src/accounts/migrations/__pycache__
 employee-src/accounts/migrations/000*
 
 employee-src/theNudgeEmployee/__pycache__/*
 employee-src/db.sqlite3
->>>>>>> d483562cc79ffe1c27ca5fa37de893b6d5f45d24

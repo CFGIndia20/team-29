@@ -1,0 +1,118 @@
+body{
+	background: #dedede;
+	font-family: arial;
+	margin:0;
+	padding: 0;
+
+}
+
+.dropdwn{
+	margin: 0 auto;
+}
+
+nav{
+	height: 60px;
+	background: #2c3e50;
+	box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.logo{
+	padding: 5px 0 0 80px;
+	width: 150px;
+	height: auto;
+}
+
+nav ul{
+	padding: 0;
+	margin: 0;
+	float: right;
+	margin-right: 30px;
+}
+
+nav ul li{
+	background: #2c3e50;
+	position: relative;
+	list-style: none;
+	display: inline-block;
+}
+
+nav ul li a{
+	display: block;
+	padding: 0 15px;
+	color: white;
+	text-decoration: none;
+	line-height: 60px;
+	font-size: 20px;
+}
+nav ul li a:hover{
+	background: #243342;
+}
+nav ul ul{
+	position: absolute;
+	top: 60px;
+	display: none;
+}
+nav ul li:hover > ul{
+	display: block;
+}
+
+nav ul ul li{
+	width:150px;
+	float: none;
+	display: list-item;
+	position: relative;
+}
+
+nav ul ul ul li{
+	position: relative;
+	top: -60px;
+	left: 150px;
+}
+
+/* Blog Section */
+.ribbon{
+    width: 100px;
+    height: 100px;
+    margin: -10px auto;
+    background: #f0d803; 
+    position: absolute;
+    top: 0;
+    right:0;
+}
+.ribbon:before{
+    content:"";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    border-left: 75px solid #f0d803;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+.ribbon:after{
+    content:"";
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    border-right: 75px solid #f0d803;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+
+}
+.text{
+    text-align: center;
+    
+}
+.btn-color{
+    background: #f0d803;
+}
+
+
+/*End of Blog Section*/
+.left {
+    float: left;
+}
+
+.full-width {
+    width: 100%;;
+}
+
