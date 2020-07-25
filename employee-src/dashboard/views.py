@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import company_details, skills_required 
+from django.contrib.auth.models import User, auth 
 # Create your views here.
 
 companies = [
@@ -7,14 +8,43 @@ companies = [
     "name": "JOOJOO",
     "desc": "MOOOJOO",
     "email": "mojoJOJO",
-    }
+    },
+        {
+    "name": "JOOJOO",
+    "desc": "MOOOJOO",
+    "email": "mojoJOJO",
+    },
+        {
+    "name": "JOOJOO",
+    "desc": "MOOOJOO",
+    "email": "mojoJOJO",
+    },
+        {
+    "name": "JOOJOO",
+    "desc": "MOOOJOO",
+    "email": "mojoJOJO",
+    },
+        {
+    "name": "JOOJOO",
+    "desc": "MOOOJOO",
+    "email": "mojoJOJO",
+    },
+        {
+    "name": "JOOJOO",
+    "desc": "MOOOJOO",
+    "email": "mojoJOJO",
+    },
 ]
 user = {
     "name": "Anshul",
     "email": "anshul@sss.com",
 }
 def home(request):
-    return render(request, 'home/home.html', {'companies': companies, 'user': user })
+    user = request.user
+    if(not user.is_authenticated):
+        return render(request, 'home/home.html', {'companies': companies, 'user': user })
+    else:
+        return render(request, 'home/landing_page.html')
 
 def form(request):
     if request.method == 'POST':

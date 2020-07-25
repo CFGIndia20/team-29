@@ -6,14 +6,17 @@
 
 {% block body %}
 
-{% for company in companies %}
-<div class="card" style="width: 18rem; margin:100px;">
-    <img class="card-img-top" src="{% static 'images/opel (another copy).png' %}" alt={{ company.name }} >
-    <div class="card-body">
-        <h5 class="card-title">{{ company.name }}</h5>
-        <p class="card-text">{{ company.desc }}</p>
-        <input type="button" class="btn btn-primary" onclick="apply()" value="Apply">
+<div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+    {% for company in companies %}
+    <div class="card" style="min-width:18rem; flex:3; margin:20px;">
+        <img class="card-img-top" src="{% static 'images/opel.png' %}" alt={{ company.name }}>
+        <div class="card-body">
+            <h5 class="card-title">{{ company.name }}</h5>
+            <p class="card-text">{{ company.desc }}</p>
+            <input type="button" class="btn btn-primary" onclick="apply()" value="Apply">
+        </div>
     </div>
+    {% endfor %}
+
 </div>
-{% endfor %}
 {% endblock %}
