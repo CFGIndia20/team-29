@@ -8,3 +8,6 @@ Team*.zip
 learn-src/dashboard/__pycache__
 learn-src/dashboard/migrations/__pycache__
 learn-src/dashboard/migrations/000*
+
+learn-src/db.sqlite3
+employee-src/db.sqlite3
