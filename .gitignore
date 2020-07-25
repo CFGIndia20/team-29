@@ -11,3 +11,5 @@ learn-src/dashboard/migrations/000*
 
 learn-src/db.sqlite3
 employee-src/db.sqlite3
+__pycache__
+db.sqlite3
