@@ -75,5 +75,4 @@ class student_register(models.Model):
     hsc = models.BooleanField(default=False)
     is_validated = models.BooleanField(default=False)
     is_accepted = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=False)
     student_id = models.ForeignKey(MyUser, on_delete=models.CASCADE)
