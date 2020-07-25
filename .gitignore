@@ -13,3 +13,17 @@ learn-src/db.sqlite3
 employee-src/db.sqlite3
 __pycache__
 db.sqlite3
+
+employee-src/accounts/__pycache__
+employee-src/accounts/migrations/000*
+employee-src/accounts/migrations/__pycache__
+employee-src/theNudgeEmployee/__pycache__
+
+employee-src/db.sqlite3
+
+learn-src/accounts/__pycache__
+learn-src/accounts/migrations/000*
+learn-src/accounts/migrations/__pycache__
+learn-src/theNudgeEmployee/__pycache__
+
+learn-src/db.sqlite3

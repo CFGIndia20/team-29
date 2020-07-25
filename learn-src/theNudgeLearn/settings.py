@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'dashboard',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -71,6 +72,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'theNudgeLearn.wsgi.application'
 
+AUTH_USER_MODEL = 'accounts.MyUser'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
