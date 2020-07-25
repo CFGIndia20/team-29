@@ -1,0 +1,259 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+	<title>The / Nudge</title>
+  <!--  <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="student-teacher.css"> -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+
+<!-- Bootstrap CSS -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+
+
+<!--fontawesome-->
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.6.3/css/all.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+</head>
+<body>
+  
+<nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top">
+<a style="color:yellow; font-size:40px;" class="navbar-brand">The/Nudge </a>
+<button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-between" id="nav">
+<ul class="navbar-nav  mr-auto">
+<li class="nav-item" >
+<a class="nav-link text-light font-weight-bold" href="#">HOME</a>
+</li>
+<li class="nav-item dropdown" data-toggle="dropdown">
+<a class="nav-link text-light font-weight-bold px-3 dropdown-toggle" href="#" id="one-trigger">COURSE</a>
+<div class="dropdown-menu">
+<a class="dropdown-item  js-scroll-trigger" href="#problem-solving">Problem Solving</a>
+<a class="dropdown-item js-scroll-trigger" href="#English-Language">English Language</a>
+<a class="dropdown-item js-scroll-trigger" href="#Interpersonal-skills">Interpersonal skills</a>
+<a class="dropdown-item js-scroll-trigger" href="#Career-Planning">Career Planning</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link text-light font-weight-bold px-3 js-scroll-trigger" href="#">Sign in</a>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link text-light font-weight-bold px-3 js-scroll-trigger" href="#">Register</a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-light font-weight-bold px-3 js-scroll-trigger" href="#">Logout</a>
+</li>
+</ul>
+<!-- Search bar -->
+</div>
+</div>
+</nav>
+
+
+<!--slider-->
+<div id="carousel-example" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example" data-slide-to="1"></li>
+    <li data-target="#carousel-example" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="item active">
+      <a href="#"><img src="{% static 'images/t1.png' %}" /></a>
+      <div class="carousel-caption">
+        <h3>Learn</h3>
+        <p>Educate Yourself</p>
+      </div>
+    </div>
+    <div class="item">
+      <a href="#"><img src="{% static 'images/p1.png' %}"/></a>
+      <div class="carousel-caption">
+        <h3>Grow</h3>
+        <p>Stay Happy</p>
+      </div>
+    </div>
+    <div class="item">
+      <a href="#"><img src="{% static 'images/t1.png' %}" /></a>
+      <div class="carousel-caption">
+        <h3>Shine</h3>
+        <p>Grow and Shine</p>
+      </div>
+    </div>
+  </div>
+
+  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+
+<!--Subjects-->
+<!--Problem Solving-->
+<section class="page-section mt-5"  id="one">
+  <div class="container">
+      <div class="text-center">
+          <h2 class="section-heading text-uppercase">Courses</h2>
+          <h3 class="section-subheading text-muted">Moving towards brighter future.</h3>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4 shadow color">
+            <div class="card-body ">
+              <img src="{% static 'images/Problem-Solving.jpg' %}" class="card-img-top">
+              <div class="ribbon text font-weight-bold" id=problem-solving>Subject: Problem Solving</div>
+              <article>
+                <header class="mb-2">
+                <div class="small">Posted on: <time datetime="2017-03-12T10:24">July 22, 2020 at 01:44 PM</time></div>
+                 </header>
+                <p>Teach problem-solving skills in the context in which they will be used (e.g., mole fraction calculations in a chemistry course). Use real-life problems in explanations, examples, and exams. Do not teach problem solving as an independent, abstract skill.</p>
+                <a href="blog-post-text.html" class="btn btn-color"></a>
+              </article>
+            </div>
+          </div>
+        </div>
+        <!--CardView-->
+
+<!--English Language-->
+<div class="col-12 col-lg-4">
+          <div class="card mb-4 shadow color">
+            <div class="card-body ">
+              <img src="{% static 'images/Language.jpg' %}" class="card-img-top">
+              <div class="ribbon text font-weight-bold" id="English-Language">Subject: English Language</div>
+              <article>
+                <header class="mb-2">
+                   <div class="font-weight-bold"></div>
+                  <div class="small">Posted on: <time datetime="2017-03-12T10:24">July 21, 2020 at 01:44 PM</time></div>
+                 </header>
+                <p>Teaching English as a foreign language (TEFL) refers to teaching the English language to students with different first languages, typically used to imply that the English Language Learner may have already learned more than one language, prior to learning English.</p>
+                <a href="blog-post-text.html" class="btn btn-color"></a>
+              </article>
+            </div>
+          </div>
+        </div>
+<!--Interpersonal Skills-->
+<div class="col-12 col-lg-4">
+          <div class="card mb-4 shadow color">
+            <div class="card-body ">
+              <img src="{% static 'images/InterpersonalSkills.jpg' %}" class="card-img-top">
+              <div class="ribbon text font-weight-bold" id="Interpersonal-skills">Subject: Interpersonal skills</div>
+              <article>
+                <header class="mb-2">
+                   <div class="font-weight-bold"></div>
+                  <div class="small">Posted on: <time datetime="2017-03-12T10:24">July 24, 2020 at 01:44 PM</time></div>
+                 </header>
+                <p>Interpersonal communication is the process by which people exchange information, feelings, and meaning through verbal and non-verbal messages: it is face-to-face communication.Interpersonal communication is not just about what is actually said - the language used. 
+               </p>
+                <a href="blog-post-text.html" class="btn btn-color"></a>
+              </article>
+            </div>
+          </div>
+        </div>
+<!--Career Planning-->
+<div class="col-12 col-lg-4">
+          <div class="card mb-4 shadow color">
+            <div class="card-body ">
+              <img src="D:\CFG-team29\images\CareerPlanning.jpg" class="card-img-top">
+              <div class="ribbon text font-weight-bold" id="Career-Planning">Subject:Career Planning </div>
+              <article>
+                <header class="mb-2">
+                   <div class="font-weight-bold"></div>
+                  <div class="small">Posted on: <time datetime="2017-03-12T10:24">July 24, 2020 at 01:44 PM</time></div>
+                 </header>
+                <p>Career planning is a continuous process of setting individual professional goals and exploring ways to achieve them through self-evaluation, market research, and continuous learning. It is an important exercise to successfully manage your career. 
+               </p>
+                <a href="blog-post-text.html" class="btn btn-color"></a>
+              </article>
+            </div>
+          </div>
+        </div>
+
+  <!--footer-->
+    <!-- start #footer -->
+    
+        </div>
+  </div>
+  <footer id="footer" class="bg-dark text-white py-5 container-fluid full-width">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-3 col-12">
+                <h4 class="font-rubik font-size-20">The/Nudge</h4>
+                <p class="font-size-14 font-rale text-white-50">We exist to alleviate poverty scalably and sustainably</p>
+              </div>
+              <div class="col-lg-4 col-12">
+                <h4 class="font-rubik font-size-20">Newslatter</h4>
+                <form class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Email *">
+                  </div>
+                  <div class="col">
+                    <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-lg-2 col-12">
+                <h4 class="font-rubik font-size-20">Information</h4>
+                <div class="d-flex flex-column flex-wrap">
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">About Us</a>
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Delivery Information</a>
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Privacy Policy</a>
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Terms & Conditions</a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-12">
+                <h4 class="font-rubik font-size-20">Account</h4>
+                <div class="d-flex flex-column flex-wrap">
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">My Account</a>
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Order History</a>
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Wish List</a>
+                  <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Newsletters</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <div class="copyright text-center bg-dark text-white py-2">
+          <p class="font-rale font-size-14">&copy; Copyrights 2020. Desing By <a href="#" class="color-second">CFG-29</a></p>
+        </div>
+        </footer>
+
+
+
+<script type="text/javascript">
+  $().ready (function () {
+  
+  $('#one-trigger').click (function (event){
+    // event.preventDefault();
+    var goTop = $('#one').offset().top;
+    $("html, body").animate({
+      scrollTop: goTop
+    }, 500);
+  });
+  
+  
+});
+</script>
+	</body>
+	</html>
+
