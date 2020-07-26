@@ -14,6 +14,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
     {% block head %}
 
@@ -21,22 +25,29 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top">
-        <a style="color:yellow;font-size:40px;" class="navbar-brand">The/Nudge </a>
-        <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
+    <nav class="navbar navbar-expand-lg navbar-dark color-black-bg" style="background-color: black;">
+        <a class="navbar-brand m-auto" href="#">THE<b class="color-yellow">/</b>NUDGE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-between" id="nav">
-            <ul class="navbar-nav  mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link text-light font-weight-bold" href="#">HOME</a>
+        <div class="collapse navbar-collapse mr-auto " id="navbarNav">
+            <ul class="navbar-nav ml-auto font-rubik">
+                <li class="nav-item active px-2">
+                    <a class="nav-link font-size-20 " href="#">HOME</a>
                 </li>
                 {% if not user.is_authenticated %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link text-light font-weight-bold px-3 dropdown-toggle" data-toggle="dropdown" href="#">Sign in</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Register</a>
-                        <a class="dropdown-item" href="#">Login</a>
+
+                <li class="nav-item dropdown ml-auto">
+                    <a href="#" class="nav-link dropdown-toggle font-size-20" data-toggle="dropdown">Login/Register</a>
+                    <div class="dropdown-menu dropdown-menu-right">
+
+
+                        <a id="myBtn" class="dropdown-item" data-toggle="modal">Student Login</a>
+                        <div class="dropdown-divider"></div>
+                        <a id="myABtn" href="#" class="dropdown-item">Admin Login</a>
+                        <div class="dropdown-divider"></div>
+                        <a id="mysub" href="#" class="dropdown-item">Student Registration</a>
                     </div>
                 </li>
                 {% else %}
@@ -45,15 +56,63 @@
                 </li>
                 {% endif %}
 
-
             </ul>
-            <!-- Search bar -->
-        </div>
-    </nav>
 
+
+        </div>
+
+    </nav>
     {% block body %}
 
     {% endblock %}
+    {% if not user.is_authenticated %}
+
+    <footer id="footer" class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-12">
+                    <h4 class="font-rubik font-size-20">The/Nudge</h4>
+                    <p class="font-size-14 font-rale text-white-50">Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Repellendus, deserunt.</p>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h4 class="font-rubik font-size-20">Newslatter</h4>
+                    <form class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Email *">
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-2 col-12">
+                    <h4 class="font-rubik font-size-20">Information</h4>
+                    <div class="d-flex flex-column flex-wrap">
+                        <a href="#" class="font-rale font-size-14 text-white-50 pb-1">About Us</a>
+                        <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Delivery Information</a>
+                        <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Privacy Policy</a>
+                        <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Terms & Conditions</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-12">
+                    <h4 class="font-rubik font-size-20">Account</h4>
+                    <div class="d-flex flex-column flex-wrap">
+                        <a href="#" class="font-rale font-size-14 text-white-50 pb-1">My Account</a>
+                        <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Order History</a>
+                        <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Wish List</a>
+                        <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Newslatters</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright text-center bg-dark text-white py-2">
+        <p class="font-rale font-size-14">&copy; Copyrights 2020. Desing By <a href="#" class="color-second">CFG-29</a>
+        </p>
+    </div>
+    {% endif %}
+
 </body>
 
 </html>
