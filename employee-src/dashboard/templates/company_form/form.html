@@ -1,57 +1,72 @@
 <html>
-  <head>
-    <script type="text/javascript">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript">
     var i = 0;
-      function addField() {
-        var container = document.getElementById("skills");
-        container.appendChild(document.createElement("br"));      
+    function addField() {
+      var container = document.getElementById("skills");
+      container.appendChild(document.createElement("br"));
 
-        var label = document.createElement("label");
-        label.for = "skills";
-        label.className = "control-label col-sm-2";
-        i = i + 1;
-        label.innerText = "Skill " + i;
-        label.id = "skill-label-" + i;
-        container.appendChild(label);
+      var label = document.createElement("label");
+      label.for = "skills";
+      label.className = "col-sm-2 m-2 p-2";
+      i = i + 1;
+      label.innerText = "Skill " + i;
+      label.id = "skill-label-" + i;
+      container.appendChild(label);
 
-        var input = document.createElement("input");
-        input.type = "text";
-        input.name = "skills[]";
-        input.id = "skill-input-" + i;
-        container.appendChild(input);  
-      }
-      function removeField() {
-        // Number of inputs to create
-        // Container <div> where dynamic content will be placed
+      var input = document.createElement("input");
+      input.type = "text";
+      input.name = "skills[]";
+      input.id = "skill-input-" + i;
+      container.appendChild(input);
+    }
+    function removeField() {
+      // Number of inputs to create
+      // Container <div> where dynamic content will be placed
 
-        var container = document.getElementById("skills");
-        container.removeChild(document.getElementById("skill-label-" + i));
-        container.removeChild(document.getElementById("skill-input-" + i));
-        i = i - 1;    
-      }
-    </script>
-  </head>
-  <body>
-    <h4>Company Form: </h4>
-    <form class="form-horizontal" action="/action_page.php"> 
-        <div class="form-group">
-            <label for="name" class="control-label col-sm-2">Name:</label>
-            <input type="name" class="form-control">
-          </div>
-        <div class="form-group">
-          <label for="email" class="control-label col-sm-2">Email address:</label>
-          <input type="email" class="form-control">
-        </div>
-        <div class="form-group" id="skills">
-          <label for="skills" class="control-label col-sm-2">Skills Required:</label>
-          <input type="button" class="btn btn-default" onclick="addField()" value="Add Field">
-          <input type="button" class="btn btn-default" onclick="removeField()" value="Remove Field">
-        </div>
-        <div class="form-group">
-            <label for="desc" class="control-label col-sm-2">Description:</label>
-            <textarea type="email" class="form-control"></textarea>
-          </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </body>
-</html>
+      var container = document.getElementById("skills");
+      container.removeChild(document.getElementById("skill-label-" + i));
+      container.removeChild(document.getElementById("skill-input-" + i));
+      container.removeChild(container.lastChild);
+      i = i - 1;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container m-5">
+    <h4>Company Form</h4>
+    <form action="/company/form" method='POST'>
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="name" name="name" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" name="email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="jobProfile">Job Profile</label>
+        <input type="jobProfile" name="jobProfile" class="form-control">
+      </div>
+      <div class="form-group" id="skills">
+        <label for="skills">Skills Required</label>
+        <input type="button" class="btn btn-default" onclick="addField()" value="Add Field">
+        <input type="button" class="btn btn-default" onclick="removeField()" value="Remove Field">
+      </div>
+      <div class="form-group">
+        <label for="desc">Job Description</label>
+        <input type="text" name="description" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</body>
