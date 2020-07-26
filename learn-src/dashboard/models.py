@@ -9,5 +9,5 @@ class teacher(models.Model):
 
 class allotment(models.Model):
     teachers = models.ForeignKey('teacher',on_delete=models.CASCADE)
-    slotno = models.IntegerField('slotno',on_delete=models.CASCADE)
+    slotno = models.IntegerField('slotno')
     batchno = models.IntegerField()
