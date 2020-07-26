@@ -7,7 +7,6 @@ import random
 
 
 # Create your views here.
-@login_required
 def test(request):
     if request.method == 'GET':
         user = request.user

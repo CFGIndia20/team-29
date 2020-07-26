@@ -50,7 +50,7 @@
     <div class="collapse navbar-collapse justify-content-between" id="nav">
     <ul class="navbar-nav">
         <a class="nav-link text-light font-weight-bold px-3" href="">{{user.email}}</a>
-        <a class="nav-link text-light font-weight-bold px-3" href="/accounts/logout">Logout</a>
+        <a class="nav-link text-light font-weight-bold px-3" href="/accounts/login">Login</a>
     </ul>
     </div>
     </div>
@@ -63,6 +63,11 @@
             <h2> Online Assessment Results: </h2>
             <h3>user: {{user}}</h3> 
             <h3>marks: {{marks}}</h3>
+            {% if marks > 3 %}
+            <h2>Pass</h2>
+            {% else %}
+            <h2>Fail</h2>
+            {% endif %}
         </div>
 
     </div>
@@ -123,7 +128,11 @@
             <p class="font-rale font-size-14">&copy; Copyrights 2020. Desing By <a href="#" class="color-second">CFG-29</a></p>
         </div>
     </footer>
-    
+    {% for message in messages %}
+        <script>
+            alert('{{ message }}')
+        </script>
+    {% endfor %}
     <!-- !start #footer -->
 </body>
 </html>

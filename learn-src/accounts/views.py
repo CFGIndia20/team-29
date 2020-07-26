@@ -33,6 +33,7 @@ def register(request):
                 student_id = user
             )
             student.save()
+            messages.info(request, 'Registered Successfully! wait for varification thank you!')
             return redirect('/accounts/login')
         else:
             messages.info(request, 'password did not match')
@@ -53,11 +54,15 @@ def login(request):
                 auth.login(request, user)
                 return redirect('/')
             elif student.is_validated and not student.is_accepted:
-                result = test_results.objects.get(student_id = user)
-                if result.is_pass == False:
-                    messages.info(request, 'YOU did not pass baseline test')
-                    return render(request, 'accounts/error.html')
+                result = test_results.objects.filter(student_id = user).exists()
+                if result == True:
+                    res = test_results.objects.get(student_id = user)
+                    if res.is_pass == False:
+                        messages.info(request, 'YOU did not pass baseline test')
+                        return render(request, 'accounts/error.html')
                 else:
+                    auth.login(request, user)
+                    messages.info(request, 'complete the baseline test')
                     return redirect('/baseline/test')
             elif not student.is_validated: 
                 messages.info(request, 'you were not validated')
@@ -67,3 +72,7 @@ def login(request):
             return redirect('/accounts/login')
     else:
         return render(request, 'accounts/login.html')
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')

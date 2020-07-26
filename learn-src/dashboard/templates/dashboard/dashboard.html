@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The / Nudge</title>
+  <!--  <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="student-teacher.css"> -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+
+<!-- Bootstrap CSS -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+
+
+<!--fontawesome-->
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.6.3/css/all.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+</head>
+<body>
+  
+<nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top">
+<a style="color:yellow; font-size:40px;" class="navbar-brand">The/Nudge </a>
+<button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-between" id="nav">
+<ul class="navbar-nav  mr-auto">
+<li class="nav-item" >
+<a class="nav-link text-light font-weight-bold" href="#">HOME</a>
+</li>
+<li class="nav-item dropdown" data-toggle="dropdown">
+<a class="nav-link text-light font-weight-bold px-3 dropdown-toggle" href="#">COURSE</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="#">Problem Solving</a>
+<a class="dropdown-item" href="#">English Language</a>
+<a class="dropdown-item" href="#">Interpersonal skills</a>
+<a class="dropdown-item" href="#">Career Planning</a>
+</div>
+</li>
+<li class="nav-item">
+    <a href="" class="nav-link text-light font-weight-bold px-3">{{user.email}}</a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-light font-weight-bold px-3" href="/accounts/logout">Logout</a>
+</li>
+</ul>
+<!-- Search bar -->
+</div>
+</div>
+</nav>
+
+
+    <p>  </p>
+
+    <div class="col-sm-9">
+        <div class="well">
+          <h4>Dashboard</h4>
+          {% if user.is_student %}
+          <p>Teacher view</p>
+          {% else %}
+          <p>Student view</p>
+          {% endif %}
+    </div>
+
+    <div class="col-sm-9">
+        <div class="well">
+            <h4>Slot Selected</h4>
+            <div class="row">
+                <div class="col-3"><a href="slot/select/Morning Slot">Morning Slot</a></div>
+                <div class="col-3"><a href="slot/select/Afternoon Slot">Afternoon Slot</a></div>
+                <div class="col-3"><a href="slot/select/Evening Slot">Evening Slot</a></div>
+            </div>
+    </div>
+
+    </div>
+    <div class="col-sm-9">
+        <div class="well">
+          <h4>History</h4>
+          <p>{*History of student*}</p>
+        </div>
+    </div>
+</body>
+<body>
+    <div class="container">
+        <h2>Progress of your course</h2>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+            70%
+          </div>
+        </div>
+      </div>
+      
+    </body>
+    </html>
