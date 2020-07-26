@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The / Nudge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+
+
+    <!--fontawesome-->
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.6.3/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+</head>
+
+<body>
+    <p>  </p>
+    <div class="col-sm-9">
+        <div class="well">
+            <h2>Register: </h2>
+        </div>
+
+    </div>
+    <div class="col-sm-9">
+        <div class="well">
+            <form method="POST" action="/accounts/register">
+                {% csrf_token %}
+                <h4>First Name: </h4>
+                <input type="text" class="form-control" name="fname" value="" required>
+                <h4>Last Name: </h4>
+                <input type="text" class="form-control" name="lname" value="" required>
+                <h4>Email: </h4>
+                <input type="text" class="form-control" name="email" value="" required>
+                <h4>Phone no: </h4>
+                <input type="text" class="form-control" name="pno" value="" required>
+                <h4>Password: </h4>
+                <input type="password" class="form-control" name="pass1" value="" required>
+                <h4>Confirm Password: </h4>
+                <input type="password" class="form-control" name="pass2" value="" required>
+                <div class="radio">
+                    HSC<br>     
+                    <input type="radio" id="yes" name="HSC" value="True">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" id="no" name="HSC" value="False">
+                    <label for="no">No</label><br>
+                </div>
+                <div class="radio">
+                    SSC<br>     
+                    <input type="radio" id="yes" name="SSC" value="True">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" id="no" name="SSC" value="False">
+                    <label for="no">No</label><br>
+                </div>
+                <h4>File Upload: </h4>
+                
+    <div class="custom-file mb-3">
+    <input type="file" class="custom-file-input" id="customFile" name="filename">
+    
+    </div>
+    <p>  </p>
+    
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary"> Submit </button>
+        </div>
+    </div>
+</form>
+</div>
+<script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+</script>
+
+{% for message in messages %}
+    <script>
+        alert('{{ message }}')
+    </script>
+{% endfor %}
+</body>
+
+</html>
